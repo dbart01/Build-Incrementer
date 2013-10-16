@@ -8,10 +8,12 @@
 
 #import <Foundation/Foundation.h>
 
+#pragma mark - Function Prototypes -
 id plistAtFilepath(NSString *filepath);
 BOOL writePlistToFilepath(id plist, NSString *filepath);
 NSString *incrementBuildString(NSString *buildString);
 
+#pragma mark - Main -
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         if (argc < 1) return 0; // Exit normally, no arguments provided
@@ -39,6 +41,7 @@ int main(int argc, const char * argv[]) {
     return 0;
 }
 
+#pragma mark - Functions -
 id plistAtFilepath(NSString *filepath) {
     NSLog(@"Reading plist...");
     
@@ -94,6 +97,7 @@ NSString *incrementBuildString(NSString *buildString) {
     return newBuild;
 }
 
+#pragma mark - Regex Version -
 //        // Regex version
 //        NSLog(@"Opening file: %@",filePath);
 //
